@@ -1,0 +1,12 @@
+services:
+    mysql:
+        image: mariadb
+        container_name: mysql
+        user: mysql
+        environment:
+            MYSQL_DATABASE: ${DB_NAME}
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_USER: ${DB_USER}
+        ports:
+            - "3306:3306"
